@@ -1,13 +1,10 @@
 {
   "name": "@barejs/auth-provider",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": "git://github.com/rob-blackbourn/barejs-auth-provider",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "source": "src/index.js",
-  "dependencies": {
-    "react-scripts": "3.4.3"
-  },
   "scripts": {
     "build": "rollup -c"
   },
@@ -26,6 +23,9 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "react-scripts": "4.0.3"
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
@@ -37,6 +37,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.3"
   },
   "peerDependencies": {
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
