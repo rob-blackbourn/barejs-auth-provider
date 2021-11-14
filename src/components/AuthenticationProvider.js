@@ -67,7 +67,8 @@ class AuthenticationProvider extends Component {
       <AuthenticationContext.Provider
         value={{
           authFetch: this.fetch,
-          authCredentials: this.state.authCredentials
+          authCredentials: this.state.authCredentials,
+          authRedirect: this.requestAuthentication
         }}
       >
         {this.props.children}

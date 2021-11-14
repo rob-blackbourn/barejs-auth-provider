@@ -1,6 +1,6 @@
 {
   "name": "@barejs/auth-provider",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "repository": "git://github.com/rob-blackbourn/barejs-auth-provider",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
