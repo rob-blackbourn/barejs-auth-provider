@@ -19,7 +19,7 @@ class AuthenticationProvider extends Component {
     this.fetch = this.fetch.bind(this)
   }
 
-  requestAuthentication() {
+  requestAuthentication = () => {
     const { loginPath } = this.props
     const { protocol, host, href } = window.location
     const url = `${protocol}//${host}${loginPath}?redirect=${href}`
