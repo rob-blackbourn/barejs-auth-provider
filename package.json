@@ -1,6 +1,6 @@
 {
   "name": "@barejs/auth-provider",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "repository": "git://github.com/rob-blackbourn/barejs-auth-provider",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -23,14 +23,13 @@
       "last 1 safari version"
     ]
   },
-  "dependencies": {
-    "react-scripts": "4.0.3"
-  },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-class-properties": "^7.16.5",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
+    "react-scripts": "5.0.0",
     "@rollup/plugin-babel": "^5.2.0",
     "rollup": "^2.26.4",
     "rollup-plugin-delete": "^2.0.0",
