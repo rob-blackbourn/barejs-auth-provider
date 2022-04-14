@@ -1,11 +1,29 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 
 import AuthenticationContext from './AuthenticationContext'
+import { AuthCredentials } from './types'
 
-class AuthenticationProvider extends Component {
-  constructor(props) {
+export interface AuthenticationProviderProps {
+  loginPath: string
+  whoamiPath: string
+  children: React.ReactNode
+}
+
+interface AuthenticationProviderState {
+  authCredentials: AuthCredentials
+}
+
+class AuthenticationProvider extends React.Component<
+  AuthenticationProviderProps,
+  AuthenticationProviderState
+> {
+  abortController: AbortController
+
+  constructor(
+    props: AuthenticationProviderProps | Readonly<AuthenticationProviderProps>
+  ) {
     super(props)
+
     this.state = {
       authCredentials: {
         sub: '',
@@ -26,7 +44,7 @@ class AuthenticationProvider extends Component {
     window.location.replace(url)
   }
 
-  fetch(input, init = {}) {
+  fetch(input: RequestInfo, init = {}) {
     return fetch(input, {
       ...init,
       redirect: 'manual',
@@ -75,11 +93,6 @@ class AuthenticationProvider extends Component {
       </AuthenticationContext.Provider>
     )
   }
-}
-
-AuthenticationProvider.propTypes = {
-  loginPath: PropTypes.string.isRequired,
-  whoamiPath: PropTypes.string.isRequired
 }
 
 export default AuthenticationProvider
